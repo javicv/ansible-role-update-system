@@ -1,0 +1,26 @@
+galaxy_info:
+  role_name: update_system
+  author: Javier Collado
+  description: Update all system packages to latest version
+  company: javicollado.com
+
+  license: MIT
+
+  min_ansible_version: 2.9
+
+  platforms:
+  - name: EL
+    versions:
+    - all
+  - name: Fedora
+    versions:
+    - all
+
+  galaxy_tags:
+  - Update
+  - System
+  - yum
+  - dnf
+
+dependencies: []
+  
