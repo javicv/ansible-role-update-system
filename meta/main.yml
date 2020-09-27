@@ -17,8 +17,8 @@ galaxy_info:
     - all
 
   galaxy_tags:
-  - Update
-  - System
+  - update
+  - system
   - yum
   - dnf
 
