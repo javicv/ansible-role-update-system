@@ -4,6 +4,7 @@
   yum:
     name: "*"
     state: "latest"
+    exclude: "{{ exclude_pkgs | default(omit) }}"
   when: ansible_facts['pkg_mgr'] == 'yum'
   
 - name: Update system with dnf
@@ -11,4 +12,5 @@
   dnf:
     name: "*"
     state: "latest"
+    exclude: "{{ exclude_pkgs | default(omit) }}"
   when: ansible_facts['pkg_mgr'] == 'dnf'
