@@ -1,0 +1,14 @@
+---
+- name: Update system with yum
+  become: yes
+  yum:
+    name: "*"
+    state: "latest"
+    exclude: "{{ exclude_pkgs | default(omit) }}"
+
+- name: Reboot required
+  command: "/usr/bin/needs-restarting -r"
+  register: reboot_required
+  ignore_errors: True
+  changed_when: False
+  failed_when: reboot_required.rc == 2
