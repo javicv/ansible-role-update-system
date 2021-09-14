@@ -2,7 +2,7 @@
 - include_tasks: yum_update.yml
   when: ansible_facts['pkg_mgr'] == 'yum'
 
-- include_tasks: yum_update.yml
+- include_tasks: dnf_update.yml
   when: ansible_facts['pkg_mgr'] == 'dnf'
 
 - name: Reboot
