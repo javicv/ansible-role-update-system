@@ -6,6 +6,11 @@
     state: "latest"
     exclude: "{{ exclude_pkgs | default(omit) }}"
 
+- name: Autoremove unused packages
+  become: yes
+  dnf:
+    autoremove: yes
+
 - name: Reboot required
   command: "/usr/bin/needs-restarting -r"
   register: reboot_required
