@@ -1,7 +1,7 @@
 galaxy_info:
   role_name: update_system
   author: Javier Collado
-  description: Update all system packages to latest version
+  description: Update all system packages to latest version and restart system when needed
   company: javicollado.com
 
   license: MIT
