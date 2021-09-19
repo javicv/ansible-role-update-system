@@ -8,7 +8,7 @@
 
 - name: Autoremove unused packages
   become: yes
-  dnf:
+  yum:
     autoremove: yes
 
 - name: Reboot required
