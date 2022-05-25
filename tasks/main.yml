@@ -6,6 +6,7 @@
   when: ansible_facts['pkg_mgr'] == 'dnf'
 
 - name: Reboot
+  become: yes
   reboot:
     post_reboot_delay: 60
   throttle: 1
